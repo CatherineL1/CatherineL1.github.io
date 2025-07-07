@@ -98,11 +98,21 @@
             color: #333;
          }
 
-         /* Concepts Section */
+         /* Concepts Section - Bullet points */
          .concepts {
             font-size: 1rem;
             color: #7f8c8d;
             margin-top: 10px;
+         }
+
+         .concepts ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left; /* Left-align the bullet points */
+         }
+
+         .concepts li {
+            margin-bottom: 5px;
          }
 
          /* Code Section */
@@ -197,7 +207,7 @@
          <!-- Project Grid -->
          <div class="projects">
 
-            <!-- Project 1 (with embedded iframe) -->
+            <!-- Project 1 -->
             <div class="project">
                <h4>Project 1</h4>
                <p><strong>Description:</strong> This is a project I did with my peers, it is a poster describing 6 of the 17 global scholar goals. Each section includes a custom coded image and a label describing the goal.</p>
@@ -246,7 +256,109 @@
                </div>
             </div>
 
-            <!-- Add other projects with similar structure here... -->
+            <!-- Project 3 -->
+            <div class="project">
+               <h4>Project 3</h4>
+               <p><strong>Description:</strong> Unfinished.</p>
+               <iframe width="410" height="460" src="https://example.com/gameembed"></iframe>
+               <div class="concepts">
+                  <strong>Concepts:</strong>
+                  <ul>
+                     <li>N/A</li>
+                     <li>N/A</li>
+                     <li>N/A</li>
+                  </ul>
+               </div>
+               <button class="toggle-code-btn" id="btn-project3" onclick="toggleCode('project3-code')">View Code</button>
+               <div class="code-block" id="project3-code">
+                  <code>
+                     &lt;html&gt;
+                        &lt;head&gt; ... &lt;/head&gt;
+                        &lt;body&gt;
+                           &lt;canvas&gt; ... &lt;/canvas&gt;
+                        &lt;/body&gt;
+                     &lt;/html&gt;
+                  </code>
+               </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project">
+               <h4>Project 4</h4>
+               <p><strong>Description:</strong> Unfinished.</p>
+               <iframe width="410" height="460" src="https://example.com/appembed"></iframe>
+               <div class="concepts">
+                  <strong>Concepts:</strong>
+                  <ul>
+                     <li>N/A</li>
+                     <li>N/A</li>
+                     <li>N/A</li>
+                  </ul>
+               </div>
+               <button class="toggle-code-btn" id="btn-project4" onclick="toggleCode('project4-code')">View Code</button>
+               <div class="code-block" id="project4-code">
+                  <code>
+                     &lt;html&gt;
+                        &lt;head&gt; ... &lt;/head&gt;
+                        &lt;body&gt;
+                           &lt;form&gt; ... &lt;/form&gt;
+                        &lt;/body&gt;
+                     &lt;/html&gt;
+                  </code>
+               </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project">
+               <h4>Project 5</h4>
+               <p><strong>Description:</strong> Unfinished.</p>
+               <iframe width="410" height="460" src="https://example.com/weatherappembed"></iframe>
+               <div class="concepts">
+                  <strong>Concepts:</strong>
+                  <ul>
+                     <li>N/A</li>
+                     <li>N/A</li>
+                     <li>N/A</li>
+                  </ul>
+               </div>
+               <button class="toggle-code-btn" id="btn-project5" onclick="toggleCode('project5-code')">View Code</button>
+               <div class="code-block" id="project5-code">
+                  <code>
+                     &lt;html&gt;
+                        &lt;head&gt; ... &lt;/head&gt;
+                        &lt;body&gt;
+                           &lt;div&gt;Weather App...&lt;/div&gt;
+                        &lt;/body&gt;
+                     &lt;/html&gt;
+                  </code>
+               </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project">
+               <h4>Project 6</h4>
+               <p><strong>Description:</strong> Unfinished.</p>
+               <iframe width="410" height="460" src="https://example.com/datavisualization"></iframe>
+               <div class="concepts">
+                  <strong>Concepts:</strong>
+                  <ul>
+                     <li>N/A</li>
+                     <li>N/A</li>
+                     <li>N/A</li>
+                  </ul>
+               </div>
+               <button class="toggle-code-btn" id="btn-project6" onclick="toggleCode('project6-code')">View Code</button>
+               <div class="code-block" id="project6-code">
+                  <code>
+                     &lt;html&gt;
+                        &lt;head&gt; ... &lt;/head&gt;
+                        &lt;body&gt;
+                           &lt;canvas&gt; ... &lt;/canvas&gt;
+                        &lt;/body&gt;
+                     &lt;/html&gt;
+                  </code>
+               </div>
+            </div>
 
          </div>
       </div>
@@ -257,6 +369,7 @@
       </footer>
    </body>
 </html>
+
 
 
 
