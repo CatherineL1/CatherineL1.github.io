@@ -238,22 +238,29 @@ Label('Action', 280, 185, size=13, fill='white', bold=True)
             <!-- Project 2 -->
             <div class="project">
                <h4>Project 2</h4>
-               <p><strong>Description:</strong> Unfinished.</p>
+               <p><strong>Description:</strong> This is a slides project I did with my partner. It is about good health and well-being, This slideshow consists of the problem around healthcare, statistics, additional info, and the solution.</p>
+                <iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/yellowFrog770445/embed"> 
+ </iframe> 
                <div class="concepts">
                   <strong>Concepts:</strong>
                   <ul>
-                     <li>N/A</li>
-                     <li>N/A</li>
-                     <li>N/A</li>
+                     <li>Basic functions</li>
+                     <li>Running and testing functions </li>
+                     <li>Multiple parameters</li>
                   </ul>
                </div>
                <button class="toggle-code-btn" id="btn-project2" onclick="toggleCode('project2-code')">View Code</button>
                <div class="code-block" id="project2-code">
                   <code>
-                     &lt;html&gt;
-                        &lt;head&gt; ... &lt;/head&gt;
-                        &lt;body&gt; ... &lt;/body&gt;
-                     &lt;/html&gt;
+#This is the heart function code
+def heart(mouseX, mouseY, heartColor):
+   Polygon(mouseX, mouseY, mouseX-40, mouseY-50, mouseX+40, mouseY-50, fill=heartColor)
+   Circle(mouseX-20, mouseY-60, 21.3, fill=heartColor)
+   Circle(mouseX+20, mouseY-60, 21.3, fill=heartColor)
+   Circle(mouseX, mouseY-50, 5, fill=heartColor)
+#This is the call function
+heart(200, 240, 'crimson')
                   </code>
                </div>
             </div>
