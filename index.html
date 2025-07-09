@@ -253,15 +253,16 @@ Label('Action', 280, 185, size=13, fill='white', bold=True)
                <button class="toggle-code-btn" id="btn-project2" onclick="toggleCode('project2-code')">View Code</button>
                <div class="code-block" id="project2-code">
                   <code>
-#This is the heart function code
+#This is the heart function code: This is the function that makes my logo, a heart, the parameters include mouseX, mouseY, and heartColor. This allows me to choose the location of my heart and the color when I call it. 
 def heart(mouseX, mouseY, heartColor):
    Polygon(mouseX, mouseY, mouseX-40, mouseY-50, mouseX+40, mouseY-50, fill=heartColor)
    Circle(mouseX-20, mouseY-60, 21.3, fill=heartColor)
    Circle(mouseX+20, mouseY-60, 21.3, fill=heartColor)
    Circle(mouseX, mouseY-50, 5, fill=heartColor)
-#This is the call function
+#This is the call function: This is the code that makes the heart, as explained above, the first call function will create a heart located at 200, 240, and in the color 'crimson'.
 heart(200, 240, 'crimson')
 heart(200, 380, 'lightSalmon')
+
                   </code>
                </div>
             </div>
