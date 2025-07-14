@@ -270,22 +270,30 @@ heart(200, 380, 'lightSalmon')
             <!-- Project 3 -->
             <div class="project">
                <h4>Project 3</h4>
-               <p><strong>Description:</strong> Unfinished.</p>
+               <p><strong>Description:</strong> This is a individual project that uses the skills we learned in unit 2 and unit 3. It includes onMousePress functions, if statements, and more. </p>
+                <iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/antiqueWhiteFrog650152/embed"> 
+ </iframe> 
                <div class="concepts">
                   <strong>Concepts:</strong>
                   <ul>
-                     <li>N/A</li>
-                     <li>N/A</li>
-                     <li>N/A</li>
+                     <li>onMouseMove and onMouseDrag functions</li>
+                     <li>If Statements</li>
+                     <li>Helper functions</li>
                   </ul>
                </div>
                <button class="toggle-code-btn" id="btn-project2" onclick="toggleCode('project2-code')">View Code</button>
                <div class="code-block" id="project2-code">
                   <code>
-                     &lt;html&gt;
-                        &lt;head&gt; ... &lt;/head&gt;
-                        &lt;body&gt; ... &lt;/body&gt;
-                     &lt;/html&gt;
+#This is my custom function: It includes 2 parameters, which is x and amt. It includes a if statement, that only adds 1 or 2 to the counter value when x<200 or x>200 is clicked.
+def plant(x, amt):
+    if(x<=200):
+        counter.value+=1
+    if(x>=200):
+        counter.value+=2
+#This is my call function for my custom function: This is the code that calls my function. This allows the game to add 1 or 2 to the counter when the user clicks on the grass and plants the tree:
+plant(mouseX,1)
+plant(mouseX, 2)
                   </code>
                </div>
             </div>
