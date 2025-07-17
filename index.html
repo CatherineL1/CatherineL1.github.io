@@ -301,22 +301,34 @@ plant(mouseX, 2)
             <!-- Project 4 -->
             <div class="project">
                <h4>Project 4</h4>
-               <p><strong>Description:</strong> Unfinished.</p>
+               <p><strong>Description:</strong> This is a project I did with one of my classmates. This game is a survey which shows if you have a healthy routine or not. The goal this is based off of is good health and well being.</p>
+               <iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/steelBlueHippo364285/embed"> 
+ </iframe>
                <div class="concepts">
                   <strong>Concepts:</strong>
                   <ul>
-                     <li>N/A</li>
-                     <li>N/A</li>
-                     <li>N/A</li>
+                     <li>elif statements</li>
+                     <li>onKeyPress</li></li>
+                     <li>hits and contains</li>
                   </ul>
                </div>
                <button class="toggle-code-btn" id="btn-project2" onclick="toggleCode('project2-code')">View Code</button>
                <div class="code-block" id="project2-code">
                   <code>
-                     &lt;html&gt;
-                        &lt;head&gt; ... &lt;/head&gt;
-                        &lt;body&gt; ... &lt;/body&gt;
-                     &lt;/html&gt;
+#This is my onKeyPress Function: This function makes that on the key pressed, something will happen. 
+def onKeyPress(key):
+    if(key=='space'): #This is the if statement: This code makes that if the user presses space, then a new page will show. 
+        page.value +=1 #This is my object property: This code makes that the page value will plus 1 which changes the page every time the if statement is true. 
+        page.value<=8
+        print(page.value)
+        if(page.value == 1):
+            title.visible=True
+def onMousePress(mouseX,mouseY):
+    if(r2.contains(mouseX,mouseY) and page.value==2): This is my 
+        page.score+=1
+#This is my partner's hit function:
+            
                   </code>
                </div>
             </div>
