@@ -335,22 +335,51 @@ def onMousePress(mouseX,mouseY):
             <!-- Project 5 -->
             <div class="project">
                <h4>Project 5</h4>
-               <p><strong>Description:</strong> Unfinished.</p>
+               <p><strong>Description:</strong> This project uses compounds and nested conditionals, and even uses onKeyHold to move the mouse. This game is a cheese hunt where the player has to help the mouse get food for its family.</p>
+               <iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/purpleElephant599429/embed"> 
+ </iframe> 
                <div class="concepts">
                   <strong>Concepts:</strong>
                   <ul>
-                     <li>N/A</li>
-                     <li>N/A</li>
-                     <li>N/A</li>
+                     <li>Compound Conditionals</li>
+                     <li>Nested Conditionals</li>
+                     <li>OnKeyHold Basics</li>
                   </ul>
                </div>
                <button class="toggle-code-btn" id="btn-project2" onclick="toggleCode('project2-code')">View Code</button>
                <div class="code-block" id="project2-code">
                   <code>
-                     &lt;html&gt;
-                        &lt;head&gt; ... &lt;/head&gt;
-                        &lt;body&gt; ... &lt;/body&gt;
-                     &lt;/html&gt;
+def onKeyHold(keys): #This is a complex conditional (def onKeyHold), this makes that when you hold a specific key, the mouse moves. 
+    if('down' in keys) and (mouse.centerY<=400): #This makes that when you press down the mouse moves down
+        mouse.centerY+=10
+    elif('right'in keys) and (mouse.centerX<=400): #This makes that when you press right the mouse moves right
+        mouse.centerX +=10
+    elif('up'in keys) and (mouse.centerY>=0): #This makes that when you press up the mouse moves up
+        mouse.centerY -=10
+    elif('left'in keys) and (mouse.centerX>=0): #This makes that when you press left the mouse moves left
+        mouse.centerX -=10
+def level(levelnum):            
+    if(mouse.hitsShape(exitrect)):
+        if(levelnum==1): #This is a nested conditional since it is inside another if statement 
+            finalResults1.visible=True
+            finalResults1.toFront()
+    elif(trap1.visible==True or trap2.visible==True):
+        if(levelnum==2):
+            finalResults2.visible=True
+            finalResults2.toFront()
+    elif(trap1.visible==True and trap2.visible==True):
+        if(levelnum==2):
+            finalResults2.visible=True
+            finalResults2.toFront()
+    elif(mouse.hitsShape(exitrect) and levelnum==1):
+        if(not mouse.hitsShape(mouseTrap1) and not mouse.hitsShape(mouseTrap2) and levelnum==2):
+            finalResults3.visible=True
+            finalResults3.toFront()
+   level(1) #These are the calls for the function
+   level(2)
+
+                     
                   </code>
                </div>
             </div>
