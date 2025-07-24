@@ -387,22 +387,93 @@ def level(levelnum):
                <!-- Project 6 -->
             <div class="project">
                <h4>Project 6</h4>
-               <p><strong>Description:</strong> Unfinished.</p>
+               <p><strong>Description:</strong> This is a project I did with one of my peers. This is a game about zero hunger. It includes 2 games, problems on world hunger, and statistics. I did game 1 and my partner did game 2 </p>
+                <iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/linenEagle180681/embed"> 
+ </iframe> 
                <div class="concepts">
                   <strong>Concepts:</strong>
                   <ul>
-                     <li>N/A</li>
-                     <li>N/A</li>
-                     <li>N/A</li>
+                     <li>Groups</li>
+                     <li>Motion</li>
+                     <li>onStep Function</li>
                   </ul>
                </div>
-               <button class="toggle-code-btn" id="btn-project2" onclick="toggleCode('project2-code')">View Code</button>
-               <div class="code-block" id="project2-code">
+               <button class="toggle-code-btn" id="btn-project6" onclick="toggleCode('project6-code')">View Code</button>
+               <div class="code-block" id="project6-code">
                   <code>
-                     &lt;html&gt;
-                        &lt;head&gt; ... &lt;/head&gt;
-                        &lt;body&gt; ... &lt;/body&gt;
-                     &lt;/html&gt;
+def checkCatchBonus(obj, speedThreshold): #This is my custom function, this code updates the users score. obj and speedThreshold is the parameters. 
+    if (obj.hitsShape(bowl)):
+        peoplefedcounter.value +=1
+        obj.visible = False
+        if (obj.speed > speedThreshold): #This is the complex conditionals and nested if statement
+            peoplefedcounter.value +=1
+def onStep(): #This is my onStep function. 
+    if(page.value ==1):
+        page_1.visible=True
+        rect1.toFront()
+        page_1.toFront()
+        Button1.toFront()
+        Button2.toFront()
+        Button3.toFront()
+        Button4.toFront()
+    if(page.value ==2):
+        page_1.visible=True
+        rect1.toFront()
+        page_1.toFront()
+        Button1.toFront()
+        Button2.toFront()
+        Button3.toFront()
+        Button4.toFront()
+        page_2.visible=True
+        page_2.toFront()
+    if(page.value==3):
+        page_1.visible=True
+        page_2.visible=False
+        statistic1.toFront()
+        
+    if app.game1 == True:
+        burgers.centerY+=10
+        egg.centerY+=10
+        bomb.centerY+=5
+        time.value-=1
+        timer.value=int(time.value//30)
+        if(burgers.top>=400):
+            burgers.bottom=0
+            burgers.left=random.randint(0, 380)
+            burgers.centerY+=burgers.speed
+            burgers.visible=True
+        if(egg.top>=400):
+            egg.bottom=0
+            egg.left=random.randint(0, 380)
+            egg.centerY+=egg.speed
+            egg.visible=True
+        if(bomb.top>=400):
+            bomb.bottom=0
+            bomb.left=random.randint(0, 380)
+        checkCatchBonus(burgers, 1)
+        checkCatchBonus(egg, 3)
+        if(bomb.hitsShape(bowl)):
+            app.stop()
+            bombscreen.visible=True
+        if(peoplefedcounter.value>=100):
+            app.stop()
+            successscreen.visible=True
+    if(page.value==4):
+                
+        if  app.game2==True:
+            burgers.visible=False
+            egg.visible=False
+            bomb.visible=False
+            time1.visible=False
+            time.visible=False
+            timer.visible=False
+            app.background='lightCoral'
+            if (caption.value>=80 and caption1.value>=80):
+                app.background = 'darkRed'
+                Label('You saved many people from hunger', 200,150, fill='white', size =18)
+
+                     
                   </code>
                </div>
             </div>
